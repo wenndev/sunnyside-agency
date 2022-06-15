@@ -1,0 +1,66 @@
+@use 'variables';
+@use '_mixins';
+
+.testimonials {
+    background-color: variables.$white;
+    min-height:90vh;
+    @include mixins.flex-center;
+
+    .testimonials-content {
+        max-width: 80vw;
+        text-align: center;
+
+        .testimonials-title {
+            font-family: variables.$fraunces;
+            font-size:1.1rem;
+            letter-spacing: 0.3rem;
+            text-transform: uppercase;
+            text-align: center;
+            color: variables.$grayish-blue;
+            margin-bottom:3rem;
+        }
+        .testimonials-cards {
+            display: flex;
+            gap: 1rem;
+
+        }
+        .card {
+            padding: 1rem;
+
+            &__profile{
+                border-radius:50%;
+                width:6rem;
+                height:auto;
+            }
+            &__paragraph{
+                font-family: variables.$barlow;
+                color: variables.$dark-blue;
+                line-height:1.5rem;
+                margin: 2rem 0;
+            }
+            &__profile-name {
+                font-family: variables.$fraunces;
+                font-size:1.3rem;
+                font-weight: bold;
+            }
+            &__profile-occupation {
+                font-family: variables.$barlow;
+                font-size: 0.9rem;
+                color: variables.$grayish-blue;
+            }
+        }
+    }
+    
+    
+}
+
+@media (max-width:865px){
+    .testimonials-cards{
+        flex-direction: column;
+        margin-bottom:2rem;
+        gap: 2rem;
+    }
+    .testimonials-title{
+        margin-top:2rem;
+    }
+}

@@ -1,0 +1,109 @@
+@use '_reset';
+@use 'variables';
+@use '_mixins';
+
+@use '_grid-gallery';
+@use '_testimonials';
+@use '_footer';
+
+
+.header{
+    width: 100vw;
+    padding:1.5rem 2rem;
+    position:absolute;
+    top: 0;
+    left: 0;
+    @include mixins.flex-center;
+    justify-content:space-between;
+}
+.logo {
+    max-width: 100%;
+    flex-shrink: 1;
+}
+.menu-navbar { 
+    @include mixins.flex-center;
+    justify-content:space-between;
+
+    &__link {
+        margin-right: 1rem;
+        font-size:1.2rem;
+        font-family: variables.$barlow;
+        color: variables.$white;
+        padding: 0.5rem 1.8rem;
+        border-radius: 18px;
+
+        &:hover{
+           background-color: #ffffff66;
+           color: variables.$white;
+           transition: all 0.2s ease-in;
+        }
+
+    }
+    .nav-menu__btn{
+            background-color: variables.$white;
+            color: #030303;
+            font-size: 1.3rem;
+        }
+
+}
+.hamburger-menu{
+    display:none; // retira o menu-hamburguer até os 800px
+}
+
+//Mobile Header
+@media (max-width:865px){
+    .menu-navbar{
+        display: none;
+        justify-content: space-evenly;
+        position:absolute;
+        top: 14vh;
+        right: 4vw;
+        left: 4vw;
+        height: 60vh;
+        flex-direction: column;
+        background: variables.$white;
+
+        &__link {
+            color: variables.$grayish-blue;
+            margin-right: 0;
+      
+            &:hover {
+              color: #a7abae;
+              transition: color 0.2s ease-in;
+            }
+        }
+    }
+    
+    .hamburger-menu{
+        display: block; // mostra o menu hamburguer abaixo de 800px
+    }
+}
+
+// Banner
+main {
+    width: 100vw;
+
+}
+.banner {
+    height: 100vh;
+    width: 100vw;
+    @include mixins.flex-center;
+    background: url("../images/desktop/image-header.jpg") no-repeat center center / cover;
+    
+    .banner-content {
+        @include mixins.flex-center;
+        flex-direction: column;
+        text-align: center;
+        gap: 4rem;
+        margin-top: 8vh;
+
+        &__title{
+            font-family: variables.$fraunces;
+            font-size:3.10rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5rem;
+            color: #ffffff;
+        }
+    }
+}
+

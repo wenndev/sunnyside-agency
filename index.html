@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!--CSS Externo-->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap" rel="stylesheet"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2? family=Fraunces:wght@700;900&display=swap" rel="stylesheet"> 
+  
+  <title>Frontend Mentor | Sunnyside agency landing page</title>
+</head>
+<body>
+    <header class="header">
+      <figure>
+        <img src="./images/logo.svg" alt="" class="logo" alt="Sunnyside's logo">
+      </figure>
+      <nav>
+        <ul class="menu-navbar">
+          <li>
+            <a href="#" class="menu-navbar__link">About</a>
+          </li>
+          <li>
+            <a href="#" class="menu-navbar__link">Services</a>
+          </li>
+          <li>
+            <a href="#" class="menu-navbar__link">Projects</a>
+          </li>
+          <li>
+            <a href="#" class="menu-navbar__link nav-menu__btn">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Menu Burguer-->
+      <a href="#" class="hamburger-menu" onclick="showNavigation()">
+        <img src="./images/icon-hamburger.svg" alt="">
+      </a>
+    </header>
+    <!-- Main -->
+    <main>
+      <!-- Banner -->
+      <section class="banner">
+        <div class="banner-content">
+          <h1 class="banner-content__title">We are creatives</h1>
+          <figure>
+            <img src="./images/icon-arrow-down.svg" .class="icon-arrow" alt="">
+          </figure>
+        </div>
+      </section>
+      <!--Grid Gallery-->
+      <section class="grid-gallery">
+      <article class="gallery-content">
+          <h2 class="gallery-content__title">Transform your brand</h2>
+          <p class="gallery-content__paragraph">We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.</p>
+          <a href="#" class="gallery-content__link">Learn more</a>
+      </article>
+        <div class="image__one"></div>
+
+        <div class="image__two"></div>
+      <article class="gallery-content">
+          <h2 class="gallery-content__title">Stand out to the right audience</h2>
+          <p class="gallery-content__paragraph">Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
+          <a class="gallery-content__link gallery-content__link--red" href="#">Learn more</a>
+      </article>
+
+      <article class="gallery-content gallery-content--bg-one gallery-content--flex-end">
+         <h2 class="gallery-content__title gallery-content__title--cyan">Graphic Design</h2>
+         <p class="gallery-content__paragraph gallery-content__paragraph--cyan">Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
+      </article>
+      <article class="gallery-content gallery-content--bg-two gallery-content--flex-end">
+        <h2 class="gallery-content__title gallery-content__title--cyan">Photography</h2>
+        <p class="gallery-content__paragraph gallery-content__paragraph--cyan">Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
+      </article>
+      </section>
+      <!-- Testimonials -->
+      <section class="testimonials">
+        <div class="testimonials-content">
+          <h3 class="testimonials-title">Client testimonials</h3>
+          <div class="testimonials-cards">
+            <div class="card">
+              <img src="dist/images/image-emily.jpg" alt="" class="card__profile">
+              <p class="card__paragraph">We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
+              <h3 class="card__profile-name">Emily R.</h3>
+              <h4 class="card__profile-occupation">Marketing Director</h4>
+            </div>
+
+            <div class="card">
+              <img class="card__profile" src="dist/images/image-thomas.jpg" alt="">
+              <p class="card__paragraph">Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
+              <h3 class="card__profile-name">Thomas S.</h3>
+              <h4 class="card__profile-occupation">Chief Operating Officer</h4>
+            </div>
+
+            <div class="card">
+              <img class="card__profile" src="dist/images/image-jennie.jpg" alt="">
+              <p class="card__paragraph">Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
+              <h3 class="card__profile-name">Jennie F.</h3>
+              <h4 class="card__profile-occupation">Business Owner</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="image-gallery">
+        <div class="class image-gallery__img-1"></div>
+        <div class="class image-gallery__img-2"></div>
+        <div class="class image-gallery__img-3"></div>
+        <div class="class image-gallery__img-4"></div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-content">
+        <figure>
+          <img src="dist/images/logo.svg" alt="Sunnyside's">
+        </figure>
+        <nav class="footer-nav">
+          <ul class="navigation">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Projects</a></li>
+          </ul>
+          <ul class="social">
+            <li><a href="#"><img src="dist/images/icon-facebook.svg" alt=""></a></li>
+            <li><a href="#"><img src="dist/images/icon-instagram.svg" alt=""></a></li>
+            <li><a href="#"><img src="dist/images/icon-pinterest.svg" alt=""></a></li>
+            <li><a href="#"><img src="dist/images/icon-twitter.svg" alt=""></a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+    <script src="dist/js/app.js"></script>
+</body>
+</html>

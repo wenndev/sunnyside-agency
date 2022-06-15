@@ -1,0 +1,97 @@
+@use 'variables';
+@use '_mixins';
+
+.grid-gallery {
+    background-color: rgb(255, 255, 255);
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 90vh);
+}
+
+.gallery-content {
+    @include mixins.flex-center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 8rem;
+
+    &--flex-end {
+        justify-content: flex-end;
+        padding-bottom: 3.5rem;
+    }
+
+    &__title {
+        color:variables.$dark-blue;
+        font-family: variables.$fraunces;
+        font-size: 2.5rem;
+
+            &--cyan {
+                color: variables.$dark-cyan;
+                
+         }
+    }
+
+    &__paragraph {
+        color: variables.$grayish-blue;
+        font-family: variables.$barlow;
+
+        &--cyan {
+            color:variables.$dark-blue;
+            margin-bottom:1rem;
+        }
+    }
+    //Learn More
+    &__link {
+        max-width: fit-content;
+        display:inline-block;
+        font-family: variables.$fraunces;
+        font-size: 1.12rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: variables.$dark-blue;
+        border-bottom: 6px rgba(250, 212, 0, 0.2) solid;
+        border-radius: 5px;
+
+        &:hover {
+            border-color: variables.$yellow;
+            transition:border 0.3s ease;
+        }
+
+        &--red {
+            border-color: rgba(254, 120, 103, 0.2);
+            
+            &:hover {
+                 border-color:variables.$soft-red;
+            }
+        }
+    }
+
+    &--bg-one {
+        background: url("../images/desktop/image-graphic-design.jpg") no-repeat
+          center center/cover;
+    }
+    &--bg-two {
+        background: url("../images/desktop/image-photography.jpg") no-repeat center
+          center/cover;
+    }
+}
+.image {
+    &__one {
+        background: url("../images/desktop/image-transform.jpg") no-repeat center center/cover;
+    }
+
+    &__two {
+        background: url("../images/desktop/image-stand-out.jpg") no-repeat center center/cover;
+    }
+}
+
+@media (max-width: 865px) { 
+    .grid-gallery {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, 90vh);
+    }
+    .gallery-content {
+      padding: 0 1rem;
+     
+    }
+  }
